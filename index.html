@@ -22,7 +22,7 @@
         </div>
     </footer>
     <script>
-        let divDigimons = document.querySelector(".digimons")
+         let divDigimons = document.querySelector(".digimons")
         fetch('https://digimon-api.vercel.app/api/digimon').then((resposta) => {
             resposta.json().then((criaturas) => {
                 criaturas.forEach((digimon) => {
