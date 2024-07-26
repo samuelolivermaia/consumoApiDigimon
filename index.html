@@ -18,17 +18,21 @@
     </footer>
     <script>
         let divDigimons = document.querySelector(".digimons")
-        fetch('https://digimon-api.vercel.app/api/digimon').then((resposta)) => {
-            resposta.json().then((criaturas)) => {
-                criaturas.forEach((digimon)) =>{
+        fetch('https://digimon-api.vercel.app/api/digimon').then((resposta) => {
+            resposta.json().then((criaturas) => {
+                criaturas.forEach((digimon) =>{
                     divDigimons.innerHTML += `
                     <li>
-                       
+                        <div class="descricao">
+                            <img src="${digimon.img}">
+                            <h3>${digimon.name}</h3>
+                        </div>
                     <li>
                          `
-                }
-            }
-        }
+                })
+            })
+        })
     </script>
 </body>
+
 </html>
